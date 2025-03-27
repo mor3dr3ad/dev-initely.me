@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Bandit Complete Walkthrough - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/bandit-walkthrough/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Bandit Complete Walkthrough">
+  <meta property="og:description" content="State “DONE” from “TODO” [2025-03-27 Thu 14:43] The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. If you notice something essential is missing or have ideas for new levels, please let us know!
+Note for beginners This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level &lt;X&gt;” contain information on how to start level X from the previous level. E.g. The page for Level 1 has information on how to gain access from Level 0 to Level 1. All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-27T14:43:00+01:00">
+    <meta property="article:modified_time" content="2025-03-27T14:43:00+01:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bandit Complete Walkthrough">
+  <meta name="twitter:description" content="State “DONE” from “TODO” [2025-03-27 Thu 14:43] The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. If you notice something essential is missing or have ideas for new levels, please let us know!
+Note for beginners This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level &lt;X&gt;” contain information on how to start level X from the previous level. E.g. The page for Level 1 has information on how to gain access from Level 0 to Level 1. All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/bandit-walkthrough/" /><link rel="prev" href="http://localhost:1313/posts/overthewire-learning-to-hack/" /><link rel="next" href="http://localhost:1313/posts/natas-walkthrough/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Bandit Complete Walkthrough",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/bandit-walkthrough\/"
+        },"genre": "posts","wordcount":  3319 ,
+        "url": "http:\/\/localhost:1313\/posts\/bandit-walkthrough\/","datePublished": "2025-03-27T14:43:00+01:00","dateModified": "2025-03-27T14:43:00+01:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Bandit Complete Walkthrough</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-27">2025-03-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3319 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;16 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><ul>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:43]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p>The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. If you notice something essential is missing or have ideas for new levels, please let us know!</p>
+<p>Note for beginners
+This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level &lt;X&gt;” contain information on how to start level X from the previous level. E.g. The page for Level 1 has information on how to gain access from Level 0 to Level 1. All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page.</p>
+<p>You will encounter many situations in which you have no idea what you are supposed to do. Don’t panic! Don’t give up! The purpose of this game is for you to learn the basics. Part of learning the basics, is reading a lot of new information. If you’ve never used the command line before, a good first read is this introduction to user commands.</p>
+<p>There are several things you can try when you are unsure how to continue:</p>
+<ul>
+<li>First, if you know a command, but don’t know how to use it, try the manual (man page) by entering man &lt;command&gt;. For example, man ls to learn about the “ls” command. The “man” command also has a manual, try it! When using man, press q to quit (you can also use / and n and N to search).</li>
+<li>Second, if there is no man page, the command might be a shell built-in. In that case use the “help &lt;X&gt;” command. E.g. help cd</li>
+<li>Also, your favorite search-engine is your friend. Learn how to use it! I recommend Google.</li>
+<li>Lastly, if you are still stuck, you can join us via chat</li>
+<li>You’re ready to start! Begin with Level 0, linked at the left of this page. Good luck!</li>
+</ul>
+<p>Note for VMs: You may fail to connect to overthewire.org via SSH with a “broken pipe error” when the network adapter for the VM is configured to use NAT mode. Adding the setting IPQoS throughput to /etc/ssh/ssh_config should resolve the issue. If this does not solve your issue, the only option then is to change the adapter to Bridged mode</p>
+<ul>
+<li>Level 0: <em>ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If</em></li>
+<li>Level 1: <em>263JGJPfgU6LtdEvgfWU1XP5yac29mFx</em></li>
+<li>Level 2: <em>MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx</em></li>
+<li>Level 3: <em>2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ</em></li>
+<li>Level 4:
+<ul>
+<li>The <code>file</code> command gives us the type of data of the file, e.g. ELF which is not human-readable. The most common data encodings that are human-readable are <code>ASCII</code> and <code>Unicode</code></li>
+<li>So we can just do <code>file ./*</code> do see which file is human-readable and then cat the content giving us the password.</li>
+<li><em>4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw</em></li>
+</ul>
+</li>
+<li>Level 5 -&gt; 6:
+<ul>
+<li>We are looking for a file that is <code>human-readable</code>, <code>1033 bytes</code> and <code>not executable</code></li>
+<li>So we need to use some combination of <code>file</code>, <code>du</code>, <code>ls</code></li>
+<li>A couple of helpful commands:
+<ul>
+<li><code>du -b -a</code> -&gt; gives us the byte size for all files, we can feed this into <code>grep 1033</code> to get all files with the bytesize of 1033</li>
+</ul>
+</li>
+<li><code>find . -type f -size 1033c ! -executable -exec file '{}' \; | grep ASCII</code>
+<ul>
+<li>find all files</li>
+<li>with size 1033</li>
+<li>which are non-executable</li>
+<li><code>exec file '{}'</code> executes the file command to get the file type for all results - we then filter using <code>grep ASCII</code></li>
+</ul>
+</li>
+<li><em>HWasnPhtq9AVKe0dmk45nxy20cvUa6EG</em></li>
+</ul>
+</li>
+<li>Level 6 -&gt; 7
+<ul>
+<li>find has flags for -user and -group</li>
+<li><code>find / -type f -user bandit7 -group bandit6 -size 33c 2&gt;/dev/null</code></li>
+<li><em>morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj</em></li>
+</ul>
+</li>
+<li>Level 7 -&gt; 8
+<ul>
+<li><em>dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc</em></li>
+</ul>
+</li>
+<li>Level 8 -&gt; 9
+<ul>
+<li><code>sort data.txt | uniq -u</code></li>
+<li><em>4CKMh1JI91bUIZZPXDqGanal4xvAg0JM</em></li>
+</ul>
+</li>
+<li>Level 9 -&gt; 10
+<ul>
+<li><code>strings data.txt | grep =</code></li>
+<li><em>FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey</em></li>
+</ul>
+</li>
+<li>Level 10 -&gt; 11
+<ul>
+<li><code>base64 -d data.txt</code></li>
+<li><em>dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr</em></li>
+</ul>
+</li>
+<li>Level 11 -&gt; 12
+<ul>
+<li><code>cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'</code></li>
+<li><em>7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4</em></li>
+</ul>
+</li>
+<li>Level 12 -&gt; 13
+<ul>
+<li>The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed.</li>
+<li>First we need to reverse hexdump <code>xxd -r data.txt</code></li>
+<li>Then look at the first hex values, e.g. <code>1f 8b</code> which is a gzip compressed file. rename <code>mv data.txt data.gz</code>, unzip and proceed using <code>gzip -d</code>, <code>bzip -d</code> and <code>tar -xvf</code> until human-readable file.</li>
+<li><em>FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn</em></li>
+</ul>
+</li>
+<li>Level 13 -&gt; 14
+<ul>
+<li>The password for the next level is stored in <code>/etc/bandit_pass/bandit14</code> and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on</li>
+<li><em>MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS</em></li>
+</ul>
+</li>
+<li>Level 14 -&gt; 15
+<ul>
+<li>The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.</li>
+<li><code>echo 'password' | nc localhost 30000</code></li>
+<li><em>8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo</em></li>
+</ul>
+</li>
+<li>Level 15 -&gt; 16
+<ul>
+<li>The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.</li>
+<li><code>echo 'password' | ncat --ssl localhost 30001</code></li>
+<li><em>kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx</em></li>
+</ul>
+</li>
+<li>Level 16 -&gt; 17
+<ul>
+<li>The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL/TLS and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.</li>
+<li>Scan open ports <code>nmap -p 31000-32000 localhost</code></li>
+<li>Find out which ports run ssl: <code>nmap -p 31000-32000 -sV localhost</code></li>
+<li>Try the ports via <code>echo 'password' | ncat --ssl localhost 31790</code></li>
+<li>Correct -&gt; ssh creds</li>
+</ul>
+</li>
+<li>Level 17 -&gt; 18
+<ul>
+<li>There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new</li>
+<li>find the password via <code>diff password.old password.new</code></li>
+<li>x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO</li>
+</ul>
+</li>
+<li>Level 18 -&gt; 19
+<ul>
+<li>The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.</li>
+<li>so we get logged out immediately - let&rsquo;s then use ssh to run a command before logging out: <code>sudo ssh -i bandit17 bandit17@bandit.labs.overtheiwre.org &quot;cat readme&quot;</code></li>
+<li>cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8</li>
+</ul>
+</li>
+<li>Level 19 -&gt; 20
+<ul>
+<li>Read the bandit20 pass by using the setuid binary</li>
+<li><em>0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO</em></li>
+</ul>
+</li>
+<li>Level 20 -&gt; 21
+<ul>
+<li>There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).</li>
+<li>First, we need to serve the password on a specific port; we can do so via netcat: <code>echo 'password' | nc -l -p1234 &amp;</code>. The <code>&amp;</code> sign puts the command in the puts the command in the background. (we can also use &lsquo;CTRL + Z&rsquo; and bg)</li>
+<li>Then we can connect to the port using the binary given</li>
+<li><em>EeoULMCra2q0dSkYj561DX7s1CpBuOBt</em></li>
+</ul>
+</li>
+<li>Level 21 -&gt; 22
+<ul>
+<li>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in <em>etc/cron.d</em> for the configuration and see what command is being executed.</li>
+<li>Check cronjob under <code>/etc/cron.d/cronjob_bandit22</code></li>
+<li>Then check the contents under <code>/usr/bin/cronjob_bandit22.sh</code></li>
+<li><em>tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q</em></li>
+</ul>
+</li>
+<li>Level 22 -&gt; 23
+<ul>
+<li>Check <code>/usr/bin/cronjob_bandit23.sh</code></li>
+<li>It runs a bash script copying the pass to an unknown temp folder. But (!) the tmp folder gets created by md5sum&rsquo;ming the user name. We can copy the bash script and hardcode bandit23 instead of &lsquo;whoami&rsquo;.</li>
+<li><em>0Zf11ioIjMVN551jX3CmStKLYqjk54Ga</em></li>
+</ul>
+</li>
+<li>Level 23 -&gt; 24
+<ul>
+<li>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in <code>/etc/cron.d/</code> for the configuration and see what command is being executed. NOTE: this will require you to write your own shell script.</li>
+<li>check the cronjob under <code>/usr/bin/cronjob_bandit24.sh</code>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">myname</span><span class="o">=</span><span class="k">$(</span>whoami<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var/spool/<span class="nv">$myname</span>/foo
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Executing and deleting all scripts in /var/spool/</span><span class="nv">$myname</span><span class="s2">/foo:&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> i in * .*<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;.&#34;</span> -a <span class="s2">&#34;</span><span class="nv">$i</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;..&#34;</span> <span class="o">]</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;Handling </span><span class="nv">$i</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">owner</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>stat --format <span class="s2">&#34;%U&#34;</span> ./<span class="nv">$i</span><span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">owner</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;bandit23&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            timeout -s <span class="m">9</span> <span class="m">60</span> ./<span class="nv">$i</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        rm -f ./<span class="nv">$i</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div></div>
+</li>
+<li>The script will execute <strong>all</strong> scripts in the folder <code>/var/spool/bandit24/foo/</code>. So what we should do is place a file in the folder above that copies the password to a folder of our choosing.</li>
+<li>First, create a hard-to-guess temporary folder via <code>mktemp -d</code>, then cd into it <code>cd /tmp/tmp.QA8mBfFz1D</code>.</li>
+<li>Create a bash script that copies the password from bandit24 into a file that we created in the tmp folder.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">!#/bin/bash
+</span></span><span class="line"><span class="cl">cat /etc/bandit_pass/bandit24 &gt;&gt; /tmp/tmp.QA8mBfFz1D/bandit24_pw</span></span></code></pre></div></div>
+</li>
+<li>This should read the password from the file and print it to the file specified in our script.</li>
+<li>gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8</li>
+</ul>
+</li>
+<li>Level 24 -&gt; 25
+<ul>
+<li>A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.</li>
+<li>Let&rsquo;s see what is happening on port 30002:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit24@bandit:~$ nc localhost <span class="m">30002</span>
+</span></span><span class="line"><span class="cl">I am the pincode checker <span class="k">for</span> user bandit25. Please enter the password <span class="k">for</span> user bandit24 and the secret pincode on a single line, separated by a space.
+</span></span><span class="line"><span class="cl">gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 <span class="m">0000</span>
+</span></span><span class="line"><span class="cl">Wrong! Please enter the correct current password and pincode. Try again.
+</span></span><span class="line"><span class="cl">gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 <span class="m">0001</span>
+</span></span><span class="line"><span class="cl">Wrong! Please enter the correct current password and pincode. Try again.
+</span></span><span class="line"><span class="cl">gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 <span class="m">0002</span>
+</span></span><span class="line"><span class="cl">Wrong! Please enter the correct current password and pincode. Try again.</span></span></code></pre></div></div>
+</li>
+<li>Okay, so netcat shows us that there is a daemon asking for the current password and a numerical pin and gives back a reply. We can repeat this process numerous times without closing the connection. So the following steps should be done to find the pin via bruteforce:
+<ul>
+<li>Create a temporary folder <code>mktemp -d</code>. Cd into the folder created</li>
+<li>Create a script file and make it executable
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit24@bandit:/tmp/tmp.5XoBXIIkjm$ touch brute_force
+</span></span><span class="line"><span class="cl">bandit24@bandit:/tmp/tmp.5XoBXIIkjm$ chmod +x brute_force</span></span></code></pre></div></div>
+</li>
+<li>Create a list of all 9999 combinations of password and pin
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="nv">password</span><span class="o">=</span>gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+</span></span><span class="line"><span class="cl"><span class="k">for</span> i in <span class="si">${</span><span class="nv">seq</span><span class="p"> -w 0 9999</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$password</span><span class="s2"> </span><span class="nv">$i</span><span class="s2">&#34;</span> &gt;&gt; combinations
+</span></span><span class="line"><span class="cl"><span class="k">done</span></span></span></code></pre></div></div>
+</li>
+<li>Feed this list to netcat
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat ./combinations <span class="p">|</span> nc localhost <span class="m">30002</span>
+</span></span><span class="line"><span class="cl">..
+</span></span><span class="line"><span class="cl">..
+</span></span><span class="line"><span class="cl">Wrong! Please enter the correct current password and pincode. Try again.
+</span></span><span class="line"><span class="cl">Correct!
+</span></span><span class="line"><span class="cl">The password of user bandit25 is /redacted/</span></span></code></pre></div></div>
+</li>
+</ul>
+</li>
+<li>iCi86ttT4KSNe1armKiwbQNmB3YJP3q4</li>
+</ul>
+</li>
+<li>Level 25 -&gt; 26
+<ul>
+<li>Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.</li>
+<li>The user shell can be found in <code>/etc/passwd</code>; so we can find out the user shell via <code>cat /etc/passwd | grep bandit26</code>. It shows that it is something called <code>/usr/bin/showtext</code>.</li>
+<li>The content of this file is as follows:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit25@bandit:~$ cat /usr/bin/showtext
+</span></span><span class="line"><span class="cl"><span class="c1">#!/bin/sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TERM</span><span class="o">=</span>linux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">exec</span> more ~/text.txt
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> <span class="m">0</span></span></span></code></pre></div></div>
+So the file executes <code>more</code> with text file. A quick look at the manual for <code>more</code> gives us this:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-nil">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-nil" data-lang="nil">MORE(1)                                   User Commands                                  MORE(1)
+
+NAME
+       more - display the contents of a file in a terminal
+
+SYNOPSIS
+       more [options] file ...
+
+DESCRIPTION
+       more is a filter for paging through text one screenful at a time. This version is
+       especially primitive. Users should realize that less(1) provides more(1) emulation plus
+       extensive enhancements.</code></pre></div>
+</li>
+<li>Next check the <code>home</code> folder of user bandit25: it handily contains a ssh key for bandit26. However, when we use this key to ssh into the server as user bandit26, the shell gets dropped immediately. It seems the text.txt file is too short to get us into <code>more</code> interactively - what can be done? Simple: just make the terminal window that you use for ssh smaller so that <code>more</code> enters interactive mode! We can then hit <code>v</code> to move into <code>vim</code> and gain a shell or read the password:
+<ul>
+<li>Read the password: <code>:e /etc/bandit_pass/bandit26</code></li>
+<li>Gain a shell: We can set a different shell for vim <code>:set shell=/bin/bash</code> and then use <code>:shell</code> for executing a bandit26 shell.</li>
+</ul>
+</li>
+<li>s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ</li>
+</ul>
+</li>
+<li>Level 26 -&gt; 27
+<ul>
+<li>Good job getting a shell! Now hurry and grab the password for bandit27!</li>
+<li>When in the home folder of user bandit26, we see a file called <code>/bandit27-do</code>. We already know this type of file, it serves to run a command as another user, so a simple <code>./bandit27-do cat /etc/bandit_pass/bandit27</code> will give us the next password.</li>
+<li>upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB</li>
+</ul>
+</li>
+<li>Level 27 -&gt; 28
+<ul>
+<li>There is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo via the port 2220. The password for the user bandit27-git is the same as for the user bandit27.</li>
+<li>Okay, this is about cloning a git repo locally. First, create a temporary folder via <code>mktemp -d</code> and <code>cd</code> into it. Then use <code>git clone ssh://bandit27-git@localhost:2220/home/bandit27.git/repo</code> and cd into the downloaded repo. There is a file called <code>README</code> which contains the password.</li>
+<li>Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN</li>
+</ul>
+</li>
+<li>Level 28 -&gt; 29
+<ul>
+<li>There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo via the port 2220. The password for the user bandit28-git is the same as for the user bandit28.</li>
+<li>Okay, this seems like the same exercise as the previous level. However, when we clone the repo as before, we see that the <code>README.md</code> file only contains the user and the password is redacted
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Bandit Notes</span>
+</span></span><span class="line"><span class="cl">Some notes <span class="k">for</span> level29 of bandit.
+</span></span><span class="line"><span class="cl"><span class="c1">## credentials</span>
+</span></span><span class="line"><span class="cl">​- username: bandit29
+</span></span><span class="line"><span class="cl">​- password: xxxxxxxxxx</span></span></code></pre></div></div>
+However, this is a git repo, remember?</li>
+<li>So let&rsquo;s snoop around a bit: <code>git log --oneline --graph --decorate --all</code>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-nil">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-nil" data-lang="nil">​* 817e303 (HEAD -&gt; master, origin/master, origin/HEAD) fix info leak
+​* 3621de8 add missing data
+​*
+​* 0622b73 initial commit of README.md</code></pre></div>
+Ah, that is interesting, we see that there was an info leak which has been fixed in the latest release. So let&rsquo;s checkout a prior release: <code>git checkout 3621de8</code>.</li>
+<li>Now if we check <code>README.md</code>, we find the password.</li>
+<li>4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7</li>
+</ul>
+</li>
+<li>Level 29 -&gt; 30
+<ul>
+<li>There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo via the port 2220. The password for the user bandit29-git is the same as for the user bandit29.</li>
+<li>Proceed as in the previous levels:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit29@bandit:/tmp/tmp.tVMV0827cM/repo$ cat README.md
+</span></span><span class="line"><span class="cl"><span class="c1"># Bandit Notes</span>
+</span></span><span class="line"><span class="cl">Some notes <span class="k">for</span> bandit30 of bandit.
+</span></span><span class="line"><span class="cl"><span class="c1">## credentials</span>
+</span></span><span class="line"><span class="cl">​- username: bandit30
+</span></span><span class="line"><span class="cl">​- password: &lt;no passwords in production!&gt;</span></span></code></pre></div></div>
+So it says no passwords in production. Looking at the graph for <code>git log --oneline --graph --decorate --all</code> we see that there is a development branch:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit29@bandit:/tmp/tmp.tVMV0827cM/repo$ git log --oneline --graph --decorate --all
+</span></span><span class="line"><span class="cl">​* 081ac38 <span class="o">(</span>origin/dev<span class="o">)</span> add data needed <span class="k">for</span> development
+</span></span><span class="line"><span class="cl">​* 03aa12c add gif2ascii
+</span></span><span class="line"><span class="cl"><span class="p">|</span> * <span class="m">7226732</span> <span class="o">(</span>origin/sploits-dev<span class="o">)</span> add some silly exploit, just <span class="k">for</span> shit and giggles
+</span></span><span class="line"><span class="cl"><span class="p">|</span>/
+</span></span><span class="line"><span class="cl">​* 6ac7796 <span class="o">(</span>HEAD -&gt; master, origin/master, origin/HEAD<span class="o">)</span> fix username
+</span></span><span class="line"><span class="cl">​* e65a928 initial commit of README.md</span></span></code></pre></div></div>
+</li>
+<li>Checkout one of the development branches: <code>git checkout 081ac38</code> et voila, the <code>README.md</code> file contains a password.</li>
+<li>qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL</li>
+</ul>
+</li>
+<li>Level 30 -&gt; 31
+<ul>
+<li>Start the same way as in the exercises before by making a tmp directory and cd&rsquo;ing into it. Then clone the repo.</li>
+<li>Checking the file, we only see an empty file. The git history does not show any other commits, so no luck there. So we need to look somewhere else.</li>
+<li>In comes <code>git tag</code>. This usually serves to tag important releases (v1.0/2.0) etc. When we run <code>git tag</code> here, we see
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit30@bandit:/tmp/tmp.oN0GdVHuQ6/repo$ git tag
+</span></span><span class="line"><span class="cl">secret
+</span></span><span class="line"><span class="cl">bandit30@bandit:/tmp/tmp.oN0GdVHuQ6/repo$ git show secret</span></span></code></pre></div></div>
+Ah! We see that there is a tag called &lsquo;secret&rsquo; - could be interesting! So let&rsquo;s look at it by using <code>git show secret</code> and find our password!</li>
+<li>fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy</li>
+</ul>
+</li>
+<li>Level 31 -&gt; 32
+<ul>
+<li>There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo via the port 2220. The password for the user bandit31-git is the same as for the user bandit31.</li>
+<li>Looking at the <code>README.md</code>, we see that we need to push a file to the remote repo to find out the password.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit31@bandit:/tmp/tmp.cLzwKk9FvU/repo$ cat README.md
+</span></span><span class="line"><span class="cl">This <span class="nb">time</span> your task is to push a file to the remote repository.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Details:
+</span></span><span class="line"><span class="cl">File name: key.txt
+</span></span><span class="line"><span class="cl">Content: <span class="s1">&#39;May I come in?&#39;</span>
+</span></span><span class="line"><span class="cl">Branch: master</span></span></code></pre></div></div>
+</li>
+<li>So, first we need to create the file <code>touch key.txt</code>, then use a text editor or <code>echo 'May I come in?' &gt; key.txt</code>.</li>
+<li>When we try to add the file to git, we see that it is ignored via .gitignore:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit31@bandit:/tmp/tmp.cLzwKk9FvU/repo$ git add key.txt
+</span></span><span class="line"><span class="cl">The following paths are ignored by one of your .gitignore files:
+</span></span><span class="line"><span class="cl">key.txt
+</span></span><span class="line"><span class="cl">hint: Use -f <span class="k">if</span> you really want to add them.
+</span></span><span class="line"><span class="cl">hint: Turn this message off by running
+</span></span><span class="line"><span class="cl">hint: <span class="s2">&#34;git config advice.addIgnoredFile false&#34;</span></span></span></code></pre></div></div>
+Luckily, git itself already gives us the necessary tools to add the file anyway using the <code>-f</code> flag.</li>
+<li>We then <code>git commit -m 'Bandit Level 31'</code> and push the repo to the remote:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bandit31@bandit:/tmp/tmp.cLzwKk9FvU/repo$ git commit -m <span class="s1">&#39;Bandit Level 31&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>master 665c836<span class="o">]</span> Bandit Level <span class="m">31</span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>
+</span></span><span class="line"><span class="cl">create mode <span class="m">100644</span> key.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bandit31@bandit:/tmp/tmp.cLzwKk9FvU/repo$ git push -u origin master
+</span></span><span class="line"><span class="cl">The authenticity of host <span class="s1">&#39;[localhost]:2220 ([127.0.0.1]:2220)&#39;</span> can<span class="s1">&#39;t be established.
+</span></span></span><span class="line"><span class="cl"><span class="s1">ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+</span></span></span><span class="line"><span class="cl"><span class="s1">This key is not known by any other names.
+</span></span></span><span class="line"><span class="cl"><span class="s1">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+</span></span></span><span class="line"><span class="cl"><span class="s1">Could not create directory &#39;</span>/home/bandit31/.ssh<span class="s1">&#39; (Permission denied).
+</span></span></span><span class="line"><span class="cl"><span class="s1">Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+</span></span></span><span class="line"><span class="cl"><span class="s1">                         _                     _ _ _
+</span></span></span><span class="line"><span class="cl"><span class="s1">                            bandit31-git@localhost&#39;</span>s password:
+</span></span><span class="line"><span class="cl">Enumerating objects: 4, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Counting objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Delta compression using up to <span class="m">2</span> threads
+</span></span><span class="line"><span class="cl">Compressing objects: 100% <span class="o">(</span>2/2<span class="o">)</span>, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">326</span> bytes <span class="p">|</span> 326.00 KiB/s, <span class="k">done</span>.
+</span></span><span class="line"><span class="cl">Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused <span class="m">0</span>
+</span></span><span class="line"><span class="cl">remote: <span class="c1">### Attempting to validate files... ####</span>
+</span></span><span class="line"><span class="cl">remote:
+</span></span><span class="line"><span class="cl">remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+</span></span><span class="line"><span class="cl">remote:
+</span></span><span class="line"><span class="cl">remote: Well <span class="k">done</span>! Here is the password <span class="k">for</span> the next level:
+</span></span><span class="line"><span class="cl">remote: /redacted/
+</span></span><span class="line"><span class="cl">remote:
+</span></span><span class="line"><span class="cl">remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+</span></span><span class="line"><span class="cl">remote:
+</span></span><span class="line"><span class="cl">To ssh://localhost:2220/home/bandit31-git/repo</span></span></code></pre></div></div>
+</li>
+<li>3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K</li>
+</ul>
+</li>
+<li>Level 32 -&gt; 33
+<ul>
+<li>After all this git stuff, it’s time for another escape. Good luck!</li>
+<li>We get dropped into a &ldquo;UPPERCASE&rdquo; shell. And true enough: once we drop to the shell, we see that everything we type in gets translated to uppercases and we have no permission to run those. So, we need to think about things that are already uppercase in linux. And these are VARIABLES like <code>$SHELL</code>, <code>$HOME</code>, <code>$0</code> etc.</li>
+<li>Trying some of these variables we do at least see that we get the results back for them.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Welcome TO THE UPPERCASE SHELL
+</span></span><span class="line"><span class="cl">&gt;&gt; SHELL
+</span></span><span class="line"><span class="cl">sh: 1: SHELL: Permission denied
+</span></span><span class="line"><span class="cl">&gt;&gt; <span class="nv">$SHELL</span>
+</span></span><span class="line"><span class="cl">WELCOME TO THE UPPERCASE SHELL
+</span></span><span class="line"><span class="cl">&gt;&gt; <span class="nv">$TERM</span>
+</span></span><span class="line"><span class="cl">sh: 1: xterm-256color: Permission denied
+</span></span><span class="line"><span class="cl">&gt;&gt; <span class="nv">$HOME</span>
+</span></span><span class="line"><span class="cl">sh: 1: /home/bandit32: Permission denied
+</span></span><span class="line"><span class="cl">&gt;&gt; <span class="nv">$PWD</span>
+</span></span><span class="line"><span class="cl">sh: 1: /home/bandit32: Permission denied</span></span></code></pre></div></div>
+However, we still are not allowed to run any of these variables/results (and running them would make no sense in most cases anyhow), so we need to think of sth. else. In comes <code>$0</code> which is the path of the current running program. And voila: if we run $0, we get dropped out of the shell.
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt;&gt; <span class="nv">$0</span>
+</span></span><span class="line"><span class="cl">$ <span class="nv">$0</span>
+</span></span><span class="line"><span class="cl">$ ls -la
+</span></span><span class="line"><span class="cl">total <span class="m">36</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">2</span> root     root      <span class="m">4096</span> Sep <span class="m">19</span> 07:08 .
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">70</span> root     root      <span class="m">4096</span> Sep <span class="m">19</span> 07:09 ..
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root     root       <span class="m">220</span> Mar <span class="m">31</span>  <span class="m">2024</span> .bash_logout
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root     root      <span class="m">3771</span> Mar <span class="m">31</span>  <span class="m">2024</span> .bashrc
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root     root       <span class="m">807</span> Mar <span class="m">31</span>  <span class="m">2024</span> .profile
+</span></span><span class="line"><span class="cl">-rwsr-x---  <span class="m">1</span> bandit33 bandit32 <span class="m">15136</span> Sep <span class="m">19</span> 07:08 uppershell</span></span></code></pre></div></div>
+A quick <code>ls -la</code> shows us the files, which are not very promising right now. But wait: we see that the <code>uppershell</code> script is actually run by the user bandit33. So maybe we are already bandit33?
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ whoami
+</span></span><span class="line"><span class="cl">bandit33
+</span></span><span class="line"><span class="cl">$ cat /etc/bandit_pass/bandit33</span></span></code></pre></div></div>
+</li>
+<li>tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0</li>
+</ul>
+</li>
+<li>Level 33
+<ul>
+<li>And it seems we are done - for now:
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Congratulations on solving the last level of this game!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">At this moment, there are no more levels to play in this game. However, we are constantly working
+</span></span><span class="line"><span class="cl">on new levels and will most likely expand this game with more levels soon.
+</span></span><span class="line"><span class="cl">Keep an eye out <span class="k">for</span> an announcement on our usual communication channels!
+</span></span><span class="line"><span class="cl">In the meantime, you could play some of our other wargames.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">If you have an idea <span class="k">for</span> an awesome new level, please <span class="nb">let</span> us know!</span></span></code></pre></div></div>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-03-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/bandit-walkthrough/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/bandit-walkthrough/" data-title="Bandit Complete Walkthrough" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fbandit-walkthrough%2f&amp;text=Bandit%20Complete%20Walkthrough" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/overthewire-learning-to-hack/" class="prev" rel="prev" title="Overthewire"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Overthewire</a>
+            <a href="/posts/natas-walkthrough/" class="next" rel="next" title="Natas Complete Walkthrough">Natas Complete Walkthrough<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

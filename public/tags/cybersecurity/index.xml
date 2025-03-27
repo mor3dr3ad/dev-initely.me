@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Cybersecurity - Tag - My New Hugo Site</title>
+        <link>http://localhost:1313/tags/cybersecurity/</link>
+        <description>Cybersecurity - Tag - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 13 Feb 2025 11:36:00 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/tags/cybersecurity/" rel="self" type="application/rss+xml" /><item>
+    <title>Overthewire</title>
+    <link>http://localhost:1313/posts/overthewire-learning-to-hack/</link>
+    <pubDate>Thu, 13 Feb 2025 11:36:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/overthewire-learning-to-hack/</guid>
+    <description><![CDATA[<p>Over the wire offers a lot of free and fun machines to learn to gradually access a Linux machine, gain a foothold and then pivot from there. It has several games catering to different stages of expertise.</p>
+<ul>
+<li><a href="/posts/bandit-walkthrough/" rel="">Bandit Complete Walkthrough</a></li>
+<li><a href="/posts/natas-walkthrough/" rel="">Natas Complete Walkthrough</a></li>
+</ul>]]></description>
+</item>
+</channel>
+</rss>

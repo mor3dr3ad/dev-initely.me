@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Level 13 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/natas/level13/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Level 13">
+  <meta property="og:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas13.natas.labs.overthewire.org/
+This one looks very similar to the prior exercise, so let’s start the same way and look at the source code.
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas13&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas13&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; For security reasons, we now only accept image files!&lt;br/&gt;&lt;br/&gt; &lt;?php function genRandomString() { $length = 10; $characters = &#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;; $string = &#34;&#34;; for ($p = 0; $p &lt; $length; $p&#43;&#43;) { $string .= $characters[mt_rand(0, strlen($characters)-1)]; } return $string; } function makeRandomPath($dir, $ext) { do { $path = $dir.&#34;/&#34;.genRandomString().&#34;.&#34;.$ext; } while(file_exists($path)); return $path; } function makeRandomPathFromFilename($dir, $fn) { $ext = pathinfo($fn, PATHINFO_EXTENSION); return makeRandomPath($dir, $ext); } if(array_key_exists(&#34;filename&#34;, $_POST)) { $target_path = makeRandomPathFromFilename(&#34;upload&#34;, $_POST[&#34;filename&#34;]); $err=$_FILES[&#39;uploadedfile&#39;][&#39;error&#39;]; if($err){ if($err === 2){ echo &#34;The uploaded file exceeds MAX_FILE_SIZE&#34;; } else{ echo &#34;Something went wrong :/&#34;; } } else if(filesize($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;]) &gt; 1000) { echo &#34;File is too big&#34;; } else if (! exif_imagetype($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;])) { echo &#34;File is not an image&#34;; } else { if(move_uploaded_file($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;], $target_path)) { echo &#34;The file &lt;a href=\&#34;$target_path\&#34;&gt;$target_path&lt;/a&gt; has been uploaded&#34;; } else{ echo &#34;There was an error uploading the file, please try again!&#34;; } } } else { ?&gt; &lt;form enctype=&#34;multipart/form-data&#34; action=&#34;index.php&#34; method=&#34;POST&#34;&gt; &lt;input type=&#34;hidden&#34; name=&#34;MAX_FILE_SIZE&#34; value=&#34;1000&#34; /&gt; &lt;input type=&#34;hidden&#34; name=&#34;filename&#34; value=&#34;&lt;?php print genRandomString(); ?&gt;.jpg&#34; /&gt; Choose a JPEG to upload (max 1KB):&lt;br/&gt; &lt;input name=&#34;uploadedfile&#34; type=&#34;file&#34; /&gt;&lt;br /&gt; &lt;input type=&#34;submit&#34; value=&#34;Upload File&#34; /&gt; &lt;/form&gt; &lt;?php } ?&gt; &lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; The code introduces some additional file checking, specifically here:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="natas">
+    <meta property="article:published_time" content="2025-03-27T14:45:00+01:00">
+    <meta property="article:modified_time" content="2025-03-27T14:45:00+01:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Hacking">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Level 13">
+  <meta name="twitter:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas13.natas.labs.overthewire.org/
+This one looks very similar to the prior exercise, so let’s start the same way and look at the source code.
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas13&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas13&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; For security reasons, we now only accept image files!&lt;br/&gt;&lt;br/&gt; &lt;?php function genRandomString() { $length = 10; $characters = &#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;; $string = &#34;&#34;; for ($p = 0; $p &lt; $length; $p&#43;&#43;) { $string .= $characters[mt_rand(0, strlen($characters)-1)]; } return $string; } function makeRandomPath($dir, $ext) { do { $path = $dir.&#34;/&#34;.genRandomString().&#34;.&#34;.$ext; } while(file_exists($path)); return $path; } function makeRandomPathFromFilename($dir, $fn) { $ext = pathinfo($fn, PATHINFO_EXTENSION); return makeRandomPath($dir, $ext); } if(array_key_exists(&#34;filename&#34;, $_POST)) { $target_path = makeRandomPathFromFilename(&#34;upload&#34;, $_POST[&#34;filename&#34;]); $err=$_FILES[&#39;uploadedfile&#39;][&#39;error&#39;]; if($err){ if($err === 2){ echo &#34;The uploaded file exceeds MAX_FILE_SIZE&#34;; } else{ echo &#34;Something went wrong :/&#34;; } } else if(filesize($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;]) &gt; 1000) { echo &#34;File is too big&#34;; } else if (! exif_imagetype($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;])) { echo &#34;File is not an image&#34;; } else { if(move_uploaded_file($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;], $target_path)) { echo &#34;The file &lt;a href=\&#34;$target_path\&#34;&gt;$target_path&lt;/a&gt; has been uploaded&#34;; } else{ echo &#34;There was an error uploading the file, please try again!&#34;; } } } else { ?&gt; &lt;form enctype=&#34;multipart/form-data&#34; action=&#34;index.php&#34; method=&#34;POST&#34;&gt; &lt;input type=&#34;hidden&#34; name=&#34;MAX_FILE_SIZE&#34; value=&#34;1000&#34; /&gt; &lt;input type=&#34;hidden&#34; name=&#34;filename&#34; value=&#34;&lt;?php print genRandomString(); ?&gt;.jpg&#34; /&gt; Choose a JPEG to upload (max 1KB):&lt;br/&gt; &lt;input name=&#34;uploadedfile&#34; type=&#34;file&#34; /&gt;&lt;br /&gt; &lt;input type=&#34;submit&#34; value=&#34;Upload File&#34; /&gt; &lt;/form&gt; &lt;?php } ?&gt; &lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; The code introduces some additional file checking, specifically here:">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/natas/level13/" /><link rel="prev" href="http://localhost:1313/natas/level14/" /><link rel="next" href="http://localhost:1313/natas/level12/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Level 13",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/natas\/level13\/"
+        },"genre": "natas","keywords": "cybersecurity, hacking","wordcount":  394 ,
+        "url": "http:\/\/localhost:1313\/natas\/level13\/","datePublished": "2025-03-27T14:45:00+01:00","dateModified": "2025-03-27T14:45:00+01:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Level 13</h1><div class="content" id="content"><ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p><a href="http://natas13.natas.labs.overthewire.org/" target="_blank" rel="noopener noreffer ">http://natas13.natas.labs.overthewire.org/</a></p>
+<figure><img src="/ox-hugo/clipboard-20250316T214024.png">
+</figure>
+
+<p>This one looks very similar to the prior exercise, so let&rsquo;s start the same way and look at the source code.</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-web">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-web" data-lang="web">&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas13&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas13&lt;/h1&gt;
+&lt;div id=&#34;content&#34;&gt;
+For security reasons, we now only accept image files!&lt;br/&gt;&lt;br/&gt;
+
+&lt;?php
+
+function genRandomString() {
+    $length = 10;
+    $characters = &#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;;
+    $string = &#34;&#34;;
+
+    for ($p = 0; $p &lt; $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+    }
+
+    return $string;
+}
+
+function makeRandomPath($dir, $ext) {
+    do {
+    $path = $dir.&#34;/&#34;.genRandomString().&#34;.&#34;.$ext;
+    } while(file_exists($path));
+    return $path;
+}
+
+function makeRandomPathFromFilename($dir, $fn) {
+    $ext = pathinfo($fn, PATHINFO_EXTENSION);
+    return makeRandomPath($dir, $ext);
+}
+
+if(array_key_exists(&#34;filename&#34;, $_POST)) {
+    $target_path = makeRandomPathFromFilename(&#34;upload&#34;, $_POST[&#34;filename&#34;]);
+
+    $err=$_FILES[&#39;uploadedfile&#39;][&#39;error&#39;];
+    if($err){
+        if($err === 2){
+            echo &#34;The uploaded file exceeds MAX_FILE_SIZE&#34;;
+        } else{
+            echo &#34;Something went wrong :/&#34;;
+        }
+    } else if(filesize($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;]) &gt; 1000) {
+        echo &#34;File is too big&#34;;
+    } else if (! exif_imagetype($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;])) {
+        echo &#34;File is not an image&#34;;
+    } else {
+        if(move_uploaded_file($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;], $target_path)) {
+            echo &#34;The file &lt;a href=\&#34;$target_path\&#34;&gt;$target_path&lt;/a&gt; has been uploaded&#34;;
+        } else{
+            echo &#34;There was an error uploading the file, please try again!&#34;;
+        }
+    }
+} else {
+?&gt;
+
+&lt;form enctype=&#34;multipart/form-data&#34; action=&#34;index.php&#34; method=&#34;POST&#34;&gt;
+&lt;input type=&#34;hidden&#34; name=&#34;MAX_FILE_SIZE&#34; value=&#34;1000&#34; /&gt;
+&lt;input type=&#34;hidden&#34; name=&#34;filename&#34; value=&#34;&lt;?php print genRandomString(); ?&gt;.jpg&#34; /&gt;
+Choose a JPEG to upload (max 1KB):&lt;br/&gt;
+&lt;input name=&#34;uploadedfile&#34; type=&#34;file&#34; /&gt;&lt;br /&gt;
+&lt;input type=&#34;submit&#34; value=&#34;Upload File&#34; /&gt;
+&lt;/form&gt;
+&lt;?php } ?&gt;
+&lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>The code introduces some additional file checking, specifically here:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-php">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nx">exif_imagetype</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;uploadedfile&#39;</span><span class="p">][</span><span class="s1">&#39;tmp_name&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">echo</span> <span class="s2">&#34;File is not an image&#34;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>So let&rsquo;s look up the <code>exif_imagetype</code> function:</p>
+<blockquote>
+<p>exif_imagetype() reads the first bytes of an image and checks its signature.</p></blockquote>
+<p>So it seems that <code>exif_imagetype()</code> checks the <a href="https://en.wikipedia.org/wiki/Magic_number_%28programming%29" target="_blank" rel="noopener noreffer ">magic number</a> of the file we want to upload. Could it be as easy as adding the magic number to our webshell? Let&rsquo;s try that</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sed -i <span class="s1">&#39;1s/^/\xFF\xD8\xFF\xE0\n/&#39;</span> webshell.php</span></span></code></pre></div></div>
+<p>Yeah, that worked!</p>
+<figure><img src="/ox-hugo/clipboard-20250316T215853.png">
+</figure>
+
+<p>The rest follows the same logic as before: use the <code>?cmd=</code> parameter to access the webshell, ignore the additional characters:</p>
+<ul>
+<li>z3UYcr4v4uBpeX8f7EZbMHlzK4UR2XtQ</li>
+</ul>
+<h2 id="security-implications">Security implications</h2>
+<ul>
+<li>exif_imagetype is clearly not enough to check for filetypes, you should disable php execution in the upload directory or use stricter server-side MIME checks.</li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

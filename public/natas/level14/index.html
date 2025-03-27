@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Level 14 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/natas/level14/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Level 14">
+  <meta property="og:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas14.natas.labs.overthewire.org/
+Level 14 starts with a common username and passwword login form:
+Trying a random value yields a simple message: “Access denied”. So have a look at the sourcecode:
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas14&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas14&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; &lt;?php if(array_key_exists(&#34;username&#34;, $_REQUEST)) { $link = mysqli_connect(&#39;localhost&#39;, &#39;natas14&#39;, &#39;&lt;censored&gt;&#39;); mysqli_select_db($link, &#39;natas14&#39;); $query = &#34;SELECT * from users where username=\&#34;&#34;.$_REQUEST[&#34;username&#34;].&#34;\&#34; and password=\&#34;&#34;.$_REQUEST[&#34;password&#34;].&#34;\&#34;&#34;; if(array_key_exists(&#34;debug&#34;, $_GET)) { echo &#34;Executing query: $query&lt;br&gt;&#34;; } if(mysqli_num_rows(mysqli_query($link, $query)) &gt; 0) { echo &#34;Successful login! The password for natas15 is &lt;censored&gt;&lt;br&gt;&#34;; } else { echo &#34;Access denied!&lt;br&gt;&#34;; } mysqli_close($link); } else { ?&gt; &lt;form action=&#34;index.php&#34; method=&#34;POST&#34;&gt; Username: &lt;input name=&#34;username&#34;&gt;&lt;br&gt; Password: &lt;input name=&#34;password&#34;&gt;&lt;br&gt; &lt;input type=&#34;submit&#34; value=&#34;Login&#34; /&gt; &lt;/form&gt; &lt;?php } ?&gt; &lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; The code first checks if a username is provided, then establishes a connection to MySQL using the username natas14 and selects the natas14 database. Then it constructs the SQL query with the input from the input form. The script then runs the SQL query and checks if any rows match the username and password. Finally, it closes the connection.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="natas">
+    <meta property="article:published_time" content="2025-03-27T14:45:00+01:00">
+    <meta property="article:modified_time" content="2025-03-27T14:45:00+01:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Level 14">
+  <meta name="twitter:description" content="State “DONE” from [2025-03-27 Thu 14:45] http://natas14.natas.labs.overthewire.org/
+Level 14 starts with a common username and passwword login form:
+Trying a random value yields a simple message: “Access denied”. So have a look at the sourcecode:
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas14&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas14&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; &lt;?php if(array_key_exists(&#34;username&#34;, $_REQUEST)) { $link = mysqli_connect(&#39;localhost&#39;, &#39;natas14&#39;, &#39;&lt;censored&gt;&#39;); mysqli_select_db($link, &#39;natas14&#39;); $query = &#34;SELECT * from users where username=\&#34;&#34;.$_REQUEST[&#34;username&#34;].&#34;\&#34; and password=\&#34;&#34;.$_REQUEST[&#34;password&#34;].&#34;\&#34;&#34;; if(array_key_exists(&#34;debug&#34;, $_GET)) { echo &#34;Executing query: $query&lt;br&gt;&#34;; } if(mysqli_num_rows(mysqli_query($link, $query)) &gt; 0) { echo &#34;Successful login! The password for natas15 is &lt;censored&gt;&lt;br&gt;&#34;; } else { echo &#34;Access denied!&lt;br&gt;&#34;; } mysqli_close($link); } else { ?&gt; &lt;form action=&#34;index.php&#34; method=&#34;POST&#34;&gt; Username: &lt;input name=&#34;username&#34;&gt;&lt;br&gt; Password: &lt;input name=&#34;password&#34;&gt;&lt;br&gt; &lt;input type=&#34;submit&#34; value=&#34;Login&#34; /&gt; &lt;/form&gt; &lt;?php } ?&gt; &lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; The code first checks if a username is provided, then establishes a connection to MySQL using the username natas14 and selects the natas14 database. Then it constructs the SQL query with the input from the input form. The script then runs the SQL query and checks if any rows match the username and password. Finally, it closes the connection.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/natas/level14/" /><link rel="prev" href="http://localhost:1313/natas/level15/" /><link rel="next" href="http://localhost:1313/natas/level13/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Level 14",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/natas\/level14\/"
+        },"genre": "natas","wordcount":  1003 ,
+        "url": "http:\/\/localhost:1313\/natas\/level14\/","datePublished": "2025-03-27T14:45:00+01:00","dateModified": "2025-03-27T14:45:00+01:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Level 14</h1><div class="content" id="content"><ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p><a href="http://natas14.natas.labs.overthewire.org/" target="_blank" rel="noopener noreffer ">http://natas14.natas.labs.overthewire.org/</a></p>
+<p>Level 14 starts with a common username and passwword login form:</p>
+<figure><img src="/ox-hugo/clipboard-20250317T101510.png">
+</figure>
+
+<p>Trying a random value yields a simple message: &ldquo;Access denied&rdquo;. So have a look at the sourcecode:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-web">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-web" data-lang="web">
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas14&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas14&lt;/h1&gt;
+&lt;div id=&#34;content&#34;&gt;
+    &lt;?php
+    if(array_key_exists(&#34;username&#34;, $_REQUEST)) {
+    $link = mysqli_connect(&#39;localhost&#39;, &#39;natas14&#39;, &#39;&lt;censored&gt;&#39;);
+    mysqli_select_db($link, &#39;natas14&#39;);
+
+    $query = &#34;SELECT * from users where username=\&#34;&#34;.$_REQUEST[&#34;username&#34;].&#34;\&#34; and password=\&#34;&#34;.$_REQUEST[&#34;password&#34;].&#34;\&#34;&#34;;
+    if(array_key_exists(&#34;debug&#34;, $_GET)) {
+        echo &#34;Executing query: $query&lt;br&gt;&#34;;
+    }
+
+    if(mysqli_num_rows(mysqli_query($link, $query)) &gt; 0) {
+            echo &#34;Successful login! The password for natas15 is &lt;censored&gt;&lt;br&gt;&#34;;
+    } else {
+            echo &#34;Access denied!&lt;br&gt;&#34;;
+    }
+    mysqli_close($link);
+} else {
+?&gt;
+
+&lt;form action=&#34;index.php&#34; method=&#34;POST&#34;&gt;
+Username: &lt;input name=&#34;username&#34;&gt;&lt;br&gt;
+Password: &lt;input name=&#34;password&#34;&gt;&lt;br&gt;
+&lt;input type=&#34;submit&#34; value=&#34;Login&#34; /&gt;
+&lt;/form&gt;
+&lt;?php } ?&gt;
+&lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>The code first checks if a username is provided, then establishes a connection to MySQL using the username <code>natas14</code> and selects the natas14 database. Then it constructs the SQL query with the input from the input form. The script then runs the SQL query and checks if any rows match the username and password. Finally, it closes the connection.</p>
+<p>So we see that there is some sql code in there, which lets us suspect we might deal with a SQL injection vulnerability here.</p>
+<h2 id="background-sql-injection">Background: SQL injection</h2>
+<p>Odds are you have already heard about a SQL injection attack. They are well-known attacks due to faulty web-apps and login forms. SQL injection is a code injection attack where we manipulate SQL queries by passing parts of SQL commands via a POST form into a database/SQL query.</p>
+<p>So let&rsquo;s look at the example here: the query in question is:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;$username&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;$password&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>where username and password are passed in via the input fields in our form. These inputs are not &lsquo;sanitized&rsquo;, i.e. they are just taken as is. So we can basically pass in anything we like even fragments of SQL code. So let&rsquo;s assume we input <code>' OR '1'='1'</code> as password. That would give us:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>However <code>'1'='1'</code> is always true, so the command <code>SELECT * FROM users</code> runs even though we have given no valid password for the user logged in.</p>
+<h2 id="detour-debuggging-with-burpsuite">Detour: Debuggging with burpsuite</h2>
+<p>In the sourcecode above, we see that - if the debug parameter is set - we get the query back that is executed by the SQL engine on the server. This is potentially super helpful to debug our attack! But how do we set the parameter and see the response? This is potentially possible using the &ldquo;Inspect (Firefox/Chrome)&rdquo;, but this is quite cumbersome, especially when you want to repeat a request several times to try different stuff. In comes burpsuite. For a quick intro, see here: <a href="/tools/burpsuite/" rel="">Burpsuite</a></p>
+<p>Using burpsuite here it will be a lot easier for us to repeatedly insert different SQL commands and evaluate the outcome. First, go to Proxy and open the burpsuite browser. Notice the toggle button &ldquo;Intercept on&rdquo;, this should be toggled if you want to intercept requests.</p>
+<figure><img src="/ox-hugo/clipboard-20250319T111428.png">
+</figure>
+
+<p>For now, toggle the intercept off and navigate to natas level 14. Enter your credentials and login. When you see the login form, enable the intercept of burpsuite. Now let&rsquo;s use the SQL code snippet from above in the username field:</p>
+<figure><img src="/ox-hugo/clipboard-20250319T113040.png">
+</figure>
+
+<p>When you click login, nothing will happen, as the request is intercepted. Go to burpsuite and you see the request including your input into the username field:</p>
+<figure><img src="/ox-hugo/clipboard-20250319T114128.png">
+</figure>
+
+<p>Select the request and send it to the repeater (CTRL+R). There you will be able to change the parameters of the request and - repeatedly, hence the name - send it to the server again and see the response. Here you see the post request made and are able to manipulate it. So let&rsquo;s add the &ldquo;debug&rdquo; parameter to the request.</p>
+<figure><img src="/ox-hugo/clipboard-20250319T114726.png">
+</figure>
+
+<p>In the center column you can see the response from the server including the SQL query we were looking for. First we see that there is one additional quotation mark, let&rsquo;s get rid of it. What remains is:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="s2">&#34;&#34;</span></span></span></code></pre></div></div>
+<p>So why does this not work? This is because of the way that SQL processes operators. In SQL, <code>AND</code> takes precedence over <code>OR</code>. So the expression becomes:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="s2">&#34;1&#34;</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>So unless there is a user with an empty password, <code>password=&quot;&quot;</code> evaluates to FALSE, which gives us:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="k">TRUE</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">FALSE</span><span class="p">)</span></span></span></code></pre></div></div>
+<p><code>TRUE and FALSE</code> evaluates to <code>FALSE</code>, so unless we have an empty username (unlikely), the entire expression after <code>where</code> will evaluate to <code>FALSE</code> meaning we will see get zero output and thus we will see the &ldquo;Access denied&rdquo; dialogue.</p>
+<p>In order for the expression to work, there are two ways: either we cut the SQL expression off after our injected, which can be done by using <code>--</code> or we put the injected expression at the end, i.e. in the password field. The two requests are below for reference:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-sql">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="w"> </span><span class="c1">-- &#34;&#34; and password=&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">username</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">password</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s2">&#34;1&#34;</span><span class="o">=</span><span class="s2">&#34;1&#34;</span></span></span></code></pre></div></div>
+<p>If there is no empty username or password in the database, both <code>username=&quot;&quot;</code> as well as <code>username=&quot;&quot; and password=&quot;&quot;</code> will evaluate to <code>FALSE</code> meaning the expression will be <code>FALSE OR TRUE</code> which evaluates to <code>TRUE</code> and gives us all rows of the database.</p>
+<h2 id="breaking-the-code">Breaking the code</h2>
+<p>The SQL code here is fairly easy, so let&rsquo;s just go ahead and try the example above:</p>
+<figure><img src="/ox-hugo/clipboard-20250317T103710.png">
+</figure>
+
+<p>We need to sanitize a bit to take account for the additional quotes in our SQL code, but then: success!</p>
+<ul>
+<li>SdqIqBsFcz3yotlNYErZSZwblkm0lrvx</li>
+</ul>
+<h2 id="security-implications">Security implications</h2>
+<ul>
+<li>Allowing unsanitized SQL input is dangerous and makes your web server vulnerable to SQL injection.</li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

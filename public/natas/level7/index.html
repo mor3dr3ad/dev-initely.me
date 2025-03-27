@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Level 7 - My New Hugo Site</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/natas/level7/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Level 7">
+  <meta property="og:description" content="14:45:00&#43;01:00 draft = false &#43;&#43;&#43;
+State “DONE” from [2025-03-27 Thu .org/&gt; The next level is a bit more cryptic, all we see is this webpage with a “Home” and “About” section.
+{{&lt; figure src=&#34;/ox-hugo/clipboard-20250224T165744.png&#34; &gt;}}
+A look at the page source for this site shows us a hint though:
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas7&#34;, &#34;pass&#34;: &#34;bmg8SvU1LizuWjx3y7xkNERkHxGre0GS&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas7&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; &lt;a href=&#34;index.php?page=home&#34;&gt;Home&lt;/a&gt; &lt;a href=&#34;index.php?page=about&#34;&gt;About&lt;/a&gt; &lt;br&gt; &lt;br&gt; this is the front page &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; Apparently the password for the user natas8 is in /etc/natas_webpass/natas8. Appending this simply to the webpage does not produce the result we want. However, if we look closer at the url constructor, we see that it uses ?page=home as the constructor for home. So we try and insert the filepath above instead of home:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="natas">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Level 7">
+  <meta name="twitter:description" content="14:45:00&#43;01:00 draft = false &#43;&#43;&#43;
+State “DONE” from [2025-03-27 Thu .org/&gt; The next level is a bit more cryptic, all we see is this webpage with a “Home” and “About” section.
+{{&lt; figure src=&#34;/ox-hugo/clipboard-20250224T165744.png&#34; &gt;}}
+A look at the page source for this site shows us a hint though:
+&lt;html&gt; &lt;head&gt; &lt;!-- This stuff in the header has nothing to do with the level --&gt; &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt; &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt; &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt; &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas7&#34;, &#34;pass&#34;: &#34;bmg8SvU1LizuWjx3y7xkNERkHxGre0GS&#34; };&lt;/script&gt;&lt;/head&gt; &lt;body&gt; &lt;h1&gt;natas7&lt;/h1&gt; &lt;div id=&#34;content&#34;&gt; &lt;a href=&#34;index.php?page=home&#34;&gt;Home&lt;/a&gt; &lt;a href=&#34;index.php?page=about&#34;&gt;About&lt;/a&gt; &lt;br&gt; &lt;br&gt; this is the front page &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; Apparently the password for the user natas8 is in /etc/natas_webpass/natas8. Appending this simply to the webpage does not produce the result we want. However, if we look closer at the url constructor, we see that it uses ?page=home as the constructor for home. So we try and insert the filepath above instead of home:">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/natas/level7/" /><link rel="prev" href="http://localhost:1313/natas/level8/" /><link rel="next" href="http://localhost:1313/natas/level6/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Level 7",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/natas\/level7\/"
+        },"genre": "natas","wordcount":  175 ,
+        "url": "http:\/\/localhost:1313\/natas\/level7\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My New Hugo Site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My New Hugo Site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Level 7</h1><div class="content" id="content"><p>14:45:00+01:00
+draft = false
++++</p>
+<ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu <figure><img src="/ox-hugo/clipboard-20250224T165744.png">
+</figure>
+.org/&gt;</li>
+</ul>
+<p>The next level is a bit more cryptic, all we see is this webpage with a &ldquo;Home&rdquo; and &ldquo;About&rdquo; section.</p>
+<p>{{&lt; figure src=&quot;/ox-hugo/clipboard-20250224T165744.png&quot; &gt;}}</p>
+<p>A look at the page source for this site shows us a hint though:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-web">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-web" data-lang="web">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- This stuff in the header has nothing to do with the level --&gt;
+        &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt;
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt;
+        &lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt;
+        &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt;
+        &lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt;
+        &lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas7&#34;, &#34;pass&#34;: &#34;bmg8SvU1LizuWjx3y7xkNERkHxGre0GS&#34; };&lt;/script&gt;&lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;natas7&lt;/h1&gt;
+        &lt;div id=&#34;content&#34;&gt;
+
+            &lt;a href=&#34;index.php?page=home&#34;&gt;Home&lt;/a&gt;
+            &lt;a href=&#34;index.php?page=about&#34;&gt;About&lt;/a&gt;
+            &lt;br&gt;
+            &lt;br&gt;
+            this is the front page
+
+            &lt;!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 --&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>Apparently the password for the user natas8 is in <code>/etc/natas_webpass/natas8</code>. Appending this simply to the webpage does not produce the result we want. However, if we look closer at the url constructor, we see that it uses <code>?page=home</code> as the constructor for home. So we try and insert the filepath above instead of home:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code></code></pre></div>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

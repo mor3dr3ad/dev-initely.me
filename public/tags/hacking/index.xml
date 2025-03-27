@@ -1,0 +1,166 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hacking - Tag - My New Hugo Site</title>
+        <link>http://localhost:1313/tags/hacking/</link>
+        <description>Hacking - Tag - My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Mar 2025 14:45:00 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/tags/hacking/" rel="self" type="application/rss+xml" /><item>
+    <title>Level 13</title>
+    <link>http://localhost:1313/natas/level13/</link>
+    <pubDate>Thu, 27 Mar 2025 14:45:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/natas/level13/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p><a href="http://natas13.natas.labs.overthewire.org/" target="_blank" rel="noopener noreffer ">http://natas13.natas.labs.overthewire.org/</a></p>
+<figure>
+</figure>
+
+<p>This one looks very similar to the prior exercise, so let&rsquo;s start the same way and look at the source code.</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-web">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code class="language-web" data-lang="web">&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://natas.labs.overthewire.org/css/level.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/jquery-ui.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;http://natas.labs.overthewire.org/css/wechall.css&#34; /&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;http://natas.labs.overthewire.org/js/jquery-ui.js&#34;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&#34;http://natas.labs.overthewire.org/js/wechall.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &#34;level&#34;: &#34;natas13&#34;, &#34;pass&#34;: &#34;&lt;censored&gt;&#34; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas13&lt;/h1&gt;
+&lt;div id=&#34;content&#34;&gt;
+For security reasons, we now only accept image files!&lt;br/&gt;&lt;br/&gt;
+
+&lt;?php
+
+function genRandomString() {
+    $length = 10;
+    $characters = &#34;0123456789abcdefghijklmnopqrstuvwxyz&#34;;
+    $string = &#34;&#34;;
+
+    for ($p = 0; $p &lt; $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+    }
+
+    return $string;
+}
+
+function makeRandomPath($dir, $ext) {
+    do {
+    $path = $dir.&#34;/&#34;.genRandomString().&#34;.&#34;.$ext;
+    } while(file_exists($path));
+    return $path;
+}
+
+function makeRandomPathFromFilename($dir, $fn) {
+    $ext = pathinfo($fn, PATHINFO_EXTENSION);
+    return makeRandomPath($dir, $ext);
+}
+
+if(array_key_exists(&#34;filename&#34;, $_POST)) {
+    $target_path = makeRandomPathFromFilename(&#34;upload&#34;, $_POST[&#34;filename&#34;]);
+
+    $err=$_FILES[&#39;uploadedfile&#39;][&#39;error&#39;];
+    if($err){
+        if($err === 2){
+            echo &#34;The uploaded file exceeds MAX_FILE_SIZE&#34;;
+        } else{
+            echo &#34;Something went wrong :/&#34;;
+        }
+    } else if(filesize($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;]) &gt; 1000) {
+        echo &#34;File is too big&#34;;
+    } else if (! exif_imagetype($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;])) {
+        echo &#34;File is not an image&#34;;
+    } else {
+        if(move_uploaded_file($_FILES[&#39;uploadedfile&#39;][&#39;tmp_name&#39;], $target_path)) {
+            echo &#34;The file &lt;a href=\&#34;$target_path\&#34;&gt;$target_path&lt;/a&gt; has been uploaded&#34;;
+        } else{
+            echo &#34;There was an error uploading the file, please try again!&#34;;
+        }
+    }
+} else {
+?&gt;
+
+&lt;form enctype=&#34;multipart/form-data&#34; action=&#34;index.php&#34; method=&#34;POST&#34;&gt;
+&lt;input type=&#34;hidden&#34; name=&#34;MAX_FILE_SIZE&#34; value=&#34;1000&#34; /&gt;
+&lt;input type=&#34;hidden&#34; name=&#34;filename&#34; value=&#34;&lt;?php print genRandomString(); ?&gt;.jpg&#34; /&gt;
+Choose a JPEG to upload (max 1KB):&lt;br/&gt;
+&lt;input name=&#34;uploadedfile&#34; type=&#34;file&#34; /&gt;&lt;br /&gt;
+&lt;input type=&#34;submit&#34; value=&#34;Upload File&#34; /&gt;
+&lt;/form&gt;
+&lt;?php } ?&gt;
+&lt;div id=&#34;viewsource&#34;&gt;&lt;a href=&#34;index-source.html&#34;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<p>The code introduces some additional file checking, specifically here:</p>]]></description>
+</item>
+<item>
+    <title>Level 15</title>
+    <link>http://localhost:1313/natas/level15/</link>
+    <pubDate>Thu, 27 Mar 2025 14:45:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/natas/level15/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p><a href="http://natas15.natas.labs.overthewire.org/" target="_blank" rel="noopener noreffer ">http://natas15.natas.labs.overthewire.org/</a></p>
+<p>This level starts very similar to level 14, however no we only check for the existence of a user using an input field:</p>
+<figure>
+</figure>
+
+<p>Entering <code>natas16</code> lets us know that this user exists. However, when we look at the sourcecode we see that we have a problem here:</p>]]></description>
+</item>
+<item>
+    <title>Level 2</title>
+    <link>http://localhost:1313/natas/level2/</link>
+    <pubDate>Thu, 27 Mar 2025 14:45:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/natas/level2/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from              <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:45]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p>When we open the page, we are greeted with the following message:</p>
+<p>
+Okay, the first thing we want to do is check the source code. There is an interesting line here:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-html">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;files/pixel.png&#34;</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+<p>Looking at the picture we only see one pixel, so nothing interesting there really. However, there is another important information here, which is the filepath <code>files/pixel.png</code>. If we look at URL + <code>/files</code>, then we see that we are actually able to access this folder and find a <code>users.txt</code> file containing the password.
+</p>]]></description>
+</item>
+<item>
+    <title>Natas Complete Walkthrough</title>
+    <link>http://localhost:1313/posts/natas-walkthrough/</link>
+    <pubDate>Thu, 27 Mar 2025 14:44:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/natas-walkthrough/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:44]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p>Natas teaches the basics of serverside web-security.</p>
+<p>Each level of natas consists of its own website located at <a href="http://natasx.natas.labs.overthewire.org" target="_blank" rel="noopener noreffer ">http://natasx.natas.labs.overthewire.org</a>, where X is the level number. There is no SSH login. To access a level, enter the username for that level (e.g. natas0 for level 0) and its password.</p>]]></description>
+</item>
+<item>
+    <title>Overthewire</title>
+    <link>http://localhost:1313/posts/overthewire-learning-to-hack/</link>
+    <pubDate>Thu, 13 Feb 2025 11:36:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/overthewire-learning-to-hack/</guid>
+    <description><![CDATA[<p>Over the wire offers a lot of free and fun machines to learn to gradually access a Linux machine, gain a foothold and then pivot from there. It has several games catering to different stages of expertise.</p>
+<ul>
+<li><a href="/posts/bandit-walkthrough/" rel="">Bandit Complete Walkthrough</a></li>
+<li><a href="/posts/natas-walkthrough/" rel="">Natas Complete Walkthrough</a></li>
+</ul>]]></description>
+</item>
+</channel>
+</rss>

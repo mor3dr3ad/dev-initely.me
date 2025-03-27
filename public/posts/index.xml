@@ -1,0 +1,44 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - My New Hugo Site</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>All Posts | My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 27 Mar 2025 14:44:00 &#43;0100</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Natas Complete Walkthrough</title>
+    <link>http://localhost:1313/posts/natas-walkthrough/</link>
+    <pubDate>Thu, 27 Mar 2025 14:44:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/natas-walkthrough/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:44]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p>Natas teaches the basics of serverside web-security.</p>
+<p>Each level of natas consists of its own website located at <a href="http://natasx.natas.labs.overthewire.org" target="_blank" rel="noopener noreffer ">http://natasx.natas.labs.overthewire.org</a>, where X is the level number. There is no SSH login. To access a level, enter the username for that level (e.g. natas0 for level 0) and its password.</p>]]></description>
+</item>
+<item>
+    <title>Bandit Complete Walkthrough</title>
+    <link>http://localhost:1313/posts/bandit-walkthrough/</link>
+    <pubDate>Thu, 27 Mar 2025 14:43:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/bandit-walkthrough/</guid>
+    <description><![CDATA[<ul>
+<li>State &ldquo;DONE&rdquo;       from &ldquo;TODO&rdquo;       <!-- raw HTML omitted --><!-- raw HTML omitted -->[2025-03-27 Thu 14:43]<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+<p>The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames. If you notice something essential is missing or have ideas for new levels, please let us know!</p>
+<p>Note for beginners
+This game, like most other games, is organised in levels. You start at Level 0 and try to “beat” or “finish” it. Finishing a level results in information on how to start the next level. The pages on this website for “Level &lt;X&gt;” contain information on how to start level X from the previous level. E.g. The page for Level 1 has information on how to gain access from Level 0 to Level 1. All levels in this game have a page on this website, and they are all linked to from the sidemenu on the left of this page.</p>]]></description>
+</item>
+<item>
+    <title>Overthewire</title>
+    <link>http://localhost:1313/posts/overthewire-learning-to-hack/</link>
+    <pubDate>Thu, 13 Feb 2025 11:36:00 &#43;0100</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/overthewire-learning-to-hack/</guid>
+    <description><![CDATA[<p>Over the wire offers a lot of free and fun machines to learn to gradually access a Linux machine, gain a foothold and then pivot from there. It has several games catering to different stages of expertise.</p>
+<ul>
+<li><a href="/posts/bandit-walkthrough/" rel="">Bandit Complete Walkthrough</a></li>
+<li><a href="/posts/natas-walkthrough/" rel="">Natas Complete Walkthrough</a></li>
+</ul>]]></description>
+</item>
+</channel>
+</rss>
